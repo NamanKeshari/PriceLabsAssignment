@@ -66,7 +66,7 @@ async function main() {
       beginDate: listing?.rateSummary?.beginDate,
     });
     const diff = moment(listing?.rateSummary?.beginDate).fromNow().split(" ");
-    return diff[diff.length - 1] === "ago"; // for testing purposes
+    return diff[diff.length - 1] !== "ago"; // for testing purposes
   });
 
   let JSONasPOJO = {
